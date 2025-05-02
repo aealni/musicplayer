@@ -1,0 +1,68 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4e4c1; /* Light beige background */
+    color: #3b2f2f; /* Dark brown text */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    color: #3b2f2f;
+    text-shadow: 2px 2px #d9a066; /* Retro shadow effect */
+}
+
+audio {
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #3b2f2f;
+    border-radius: 10px;
+    background-color: #d9a066; /* Retro orange */
+    padding: 10px;
+}
+
+button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3b2f2f; /* Dark brown */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #d9a066; /* Retro orange */
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+button:focus {
+    outline: none;
+}
+
+#playButton {
+    background-color: #6b8e23; /* Olive green */
+}
+
+#pauseButton {
+    background-color: #4682b4; /* Steel blue */
+}
+
+#rewindButton {
+    background-color: #cd5c5c; /* Indian red */
+}
+
+#fastForwardButton {
+    background-color: #ff8c00; /* Dark orange */
+}
