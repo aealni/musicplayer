@@ -16,8 +16,15 @@ window.electronAPI.getMusicFiles().then(files => {
     }
 });
 
-playButton.addEventListener('click', () => audioPlayer.play());
-pauseButton.addEventListener('click', () => audioPlayer.pause());
+playButton.addEventListener('click', () => {
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        playButton.textContent = 'Pause';
+    } else {
+        audioPlayer.pause();
+        playButton.textContent = 'Play';
+    }
+});
 rewindButton.addEventListener('click', () => {
     audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10);
 });

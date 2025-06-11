@@ -22,12 +22,10 @@ audio {
     background-color: #d9a066; /* Retro orange */
     padding: 10px;
 }
-
 button {
     font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
-    background-color: #3b2f2f; /* Dark brown */
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -38,7 +36,6 @@ button {
 }
 
 button:hover {
-    background-color: #d9a066; /* Retro orange */
     transform: scale(1.1);
 }
 
@@ -55,14 +52,30 @@ button:focus {
     background-color: #6b8e23; /* Olive green */
 }
 
-#pauseButton {
-    background-color: #4682b4; /* Steel blue */
+#playButton:hover {
+    background-color: #8fbc3f; /* Lighter olive green */
 }
 
 #rewindButton {
     background-color: #cd5c5c; /* Indian red */
 }
 
+#rewindButton:hover {
+    background-color: #e57373; /* Lighter Indian red */
+}
+
 #fastForwardButton {
     background-color: #ff8c00; /* Dark orange */
+}
+
+#fastForwardButton:hover {
+    background-color: #ffa733; /* Lighter dark orange */
+}
+
+#skipButton {
+    background-color: #8b4513; /* Saddle brown */
+}
+
+#skipButton:hover {
+    background-color: #a0522d; /* Lighter saddle brown */
 }
