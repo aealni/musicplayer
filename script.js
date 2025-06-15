@@ -32,9 +32,8 @@ fastForwardButton.addEventListener('click', () => {
     audioPlayer.currentTime = Math.min(audioPlayer.duration, audioPlayer.currentTime + 10);
 });
 
-// Skip button functionality
 skipButton.addEventListener('click', () => {
-    currentSongIndex = (currentSongIndex + 1) % audioFiles.length; // Move to the next song
+    currentSongIndex = (currentSongIndex + 1) % audioFiles.length; //loop
     audioPlayer.src = audioFiles[currentSongIndex];
     audioPlayer.play();
 });

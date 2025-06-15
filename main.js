@@ -4,9 +4,9 @@ const fs = require('fs');
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
-        autoHideMenuBar: true, // Hides the menu bar
+        width: 600,
+        height: 800,
+        autoHideMenuBar: true,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'), // Preload script
             contextIsolation: true,
@@ -23,7 +23,7 @@ ipcMain.handle('get-music-files', async () => {
     const musicDir = path.join(__dirname, 'music');
     try {
         const files = fs.readdirSync(musicDir);
-        return files.filter(file => file.endsWith('.mp3')); // Return only .mp3 files
+        return files.filter(file => file.endsWith('.mp3'));
     } catch (err) {
         console.error('Error reading music directory:', err);
         return [];
