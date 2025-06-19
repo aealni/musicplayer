@@ -13,6 +13,7 @@ window.electronAPI.getMusicFiles().then(files => {
     audioFiles = files.map(file => `music/${file}`);
     if (audioFiles.length > 0) {
         audioPlayer.src = audioFiles[currentSongIndex];
+        updateSongTitle();
     }
 });
 
@@ -35,11 +36,20 @@ fastForwardButton.addEventListener('click', () => {
 skipButton.addEventListener('click', () => {
     currentSongIndex = (currentSongIndex + 1) % audioFiles.length; //loop
     audioPlayer.src = audioFiles[currentSongIndex];
+    updateSongTitle();
     audioPlayer.play();
 });
 
 audioPlayer.addEventListener('ended', () => {
     currentSongIndex = (currentSongIndex + 1) % audioFiles.length;
     audioPlayer.src = audioFiles[currentSongIndex];
+    updateSongTitle();
     audioPlayer.play();
 });
+
+function updateSongTitle() {
+    const titleElement = document.getElementById('currentSongTitle');
+    const currentPath = audioFiles[currentSongIndex];
+    const filename = currentPath.split('/').pop().replace(/\.mp3$/i, '');
+    titleElement.textContent = `Now Playing: ${filename}`;
+}
