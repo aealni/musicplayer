@@ -1,3 +1,13 @@
+
+#songImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f4e4c1; /* Light beige background */

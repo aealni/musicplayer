@@ -37,6 +37,7 @@ skipButton.addEventListener('click', () => {
     currentSongIndex = (currentSongIndex + 1) % audioFiles.length; //loop
     audioPlayer.src = audioFiles[currentSongIndex];
     updateSongTitle();
+    cycleImage();
     audioPlayer.play();
 });
 
@@ -44,6 +45,7 @@ audioPlayer.addEventListener('ended', () => {
     currentSongIndex = (currentSongIndex + 1) % audioFiles.length;
     audioPlayer.src = audioFiles[currentSongIndex];
     updateSongTitle();
+    cycleImage();
     audioPlayer.play();
 });
 
@@ -52,4 +54,16 @@ function updateSongTitle() {
     const currentPath = audioFiles[currentSongIndex];
     const filename = currentPath.split('/').pop().replace(/\.mp3$/i, '');
     titleElement.textContent = `Now Playing: ${filename}`;
+}
+
+const coverImages = [
+    './coverimages/temp1.png',
+    './coverimages/temp2.png'
+];
+let currentImageIndex = 0;
+
+function cycleImage() {
+    currentImageIndex = (currentImageIndex + 1) % coverImages.length;
+    const img = document.getElementById('songImage');
+    img.src = coverImages[currentImageIndex];
 }
